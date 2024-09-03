@@ -1,0 +1,85 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+format = """
+[ $os ](bg:color_info)\
+[](fg:color_text bg:color_info)\
+$shell\
+[](fg:color_info bg:color_username)\
+$username\
+[](fg:color_username bg:color_dir)\
+$directory\
+[](fg:color_dir bg:color_git)\
+$git_branch\
+[](fg:color_git bg:color_time)\
+$time\
+[](fg:color_time)\
+$line_break$character"""
+
+palette = 'custom'
+
+[palettes.custom]
+color_text = '#fbf1c7'
+color_info = '#d65d0e'
+color_username = '#b16286'
+color_dir = '#d79921'
+color_git = '#689d6a'
+color_time = '#3c3836'
+color_fail = '#cc241d'
+color_success = '#98971a'
+
+[os]
+disabled = false
+style = "bg:color_info fg:color_text"
+
+[os.symbols]
+Windows = "󰍲"
+Linux = "󰌽"
+Arch = "󰣇"
+EndeavourOS = "󰣇"
+
+[username]
+show_always = true
+style_user = "bg:color_username fg:color_text"
+style_root = "bg:color_username fg:color_text"
+format = '[ $user ]($style)'
+
+[shell]
+disabled = false
+style = "bg:color_info fg:color_text"
+format = "[ $indicator ]($style)"
+bash_indicator = "bash"
+fish_indicator = "fish"
+zsh_indicator = "zsh"
+powershell_indicator = "pwsh"
+
+[directory]
+style = "fg:color_text bg:color_dir"
+format = "[ $path ]($style)"
+truncation_length = 3
+truncation_symbol = "…/"
+
+[directory.substitutions]
+"Documents" = "󰈙 "
+"Downloads" = " "
+"Music" = "󰝚 "
+"Pictures" = " "
+"Developer" = "󰲋 "
+
+[git_branch]
+symbol = ""
+style = "bg:color_git"
+format = '[[ $symbol $branch ](fg:color_text bg:color_git)]($style)'
+
+[time]
+disabled = false
+time_format = "%b %d, %Y    %R (%a)"
+style = "bg:color_time"
+format = '[[ $time ](fg:color_text bg:color_time)]($style)'
+
+[line_break]
+disabled = false
+
+[character]
+disabled = false
+success_symbol = '[>](bold fg:color_success)'
+error_symbol = '[>](bold fg:color_fail)'
