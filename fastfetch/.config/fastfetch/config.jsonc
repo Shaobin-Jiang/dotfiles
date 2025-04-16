@@ -1,0 +1,107 @@
+{
+    "logo": {
+        "padding": {
+            "top": 2,
+            "left": 2
+        }
+    },
+    "display": {
+        "separator": " ➜  ",
+        "key": {
+            "paddingLeft": 2
+        }
+    },
+    "modules": [
+        "break",
+        "break",
+        {
+            "type": "custom",
+            // {#1} is equivalent to `\u001b[1m`. {#} is equivalent to `\u001b[m`
+            "format": "┌─────────────── {#1}System Information{#} ───────────────┐"
+        },
+        "break",
+        {
+            "type": "os",
+            "key": "OS   ",
+            "keyColor": "31"
+        },
+        {
+            "type": "kernel",
+            "key": " ├  ",
+            "keyColor": "31"
+        },
+        {
+            "type": "packages",
+            "key": " ├ 󰏖 ",
+            "keyColor": "31"
+        },
+        {
+            "type": "shell",
+            "key": " └  ",
+            "keyColor": "31"
+        },
+        "break",
+        {
+            "type": "wm",
+            "key": "WM   ",
+            "keyColor": "32"
+        },
+        {
+            "type": "terminal",
+            "key": " ├  ",
+            "keyColor": "32"
+        },
+        {
+            "type": "terminalfont",
+            "key": " └  ",
+            "keyColor": "32"
+        },
+        "break",
+        {
+            "type": "custom",
+            "format": "├─────────────── {#1}Hardware Information{#} ─────────────┤"
+        },
+        "break",
+        {
+            "type": "host",
+            "key": "HOST ",
+            "keyColor": "33"
+        },
+        {
+            "type": "cpu",
+            "key": " ├  ",
+            "keyColor": "33"
+        },
+        {
+            "type": "gpu",
+            "key": " ├ 󰢮 ",
+            "keyColor": "33"
+        },
+        {
+            "type": "memory",
+            "key": " ├  ",
+            "keyColor": "33"
+        },
+        {
+            "type": "swap",
+            "key": " ├ 󰓡 ",
+            "keyColor": "33"
+        },
+        {
+            "type": "disk",
+            "key": " ├ 󰋊 ",
+            "keyColor": "33"
+        },
+        {
+            "type": "monitor",
+            "key": " └  ",
+            "keyColor": "33"
+        },
+        "break",
+        {
+            "type": "colors",
+            "paddingLeft": 2,
+            "symbol": "circle"
+        }
+    ]
+}
