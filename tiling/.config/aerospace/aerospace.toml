@@ -88,7 +88,9 @@ automatically-unhide-macos-hidden-apps = true
 
 [mode.launch.binding]
     esc = ['mode main', 'exec-and-forget sketchybar --trigger aerospace_mode_change MODE=main']
-    b = ['exec-and-forget open -n /Applications/Firefox.app', 'mode main', 'exec-and-forget sketchybar --trigger aerospace_mode_change MODE=main']
+    b = ['exec-and-forget open -n /Applications/qutebrowser.app', 'mode main', 'exec-and-forget sketchybar --trigger aerospace_mode_change MODE=main']
+    shift-b = ['exec-and-forget open -n /Applications/Firefox.app', 'mode main', 'exec-and-forget sketchybar --trigger aerospace_mode_change MODE=main']
+    f = ['exec-and-forget open ~', 'mode main', 'exec-and-forget sketchybar --trigger aerospace_mode_change MODE=main']
     l = ['exec-and-forget open -n /System/Applications/Launchpad.app', 'mode main', 'exec-and-forget sketchybar --trigger aerospace_mode_change MODE=main']
     m = ['exec-and-forget open -n /System/Applications/Mail.app', 'mode main', 'exec-and-forget sketchybar --trigger aerospace_mode_change MODE=main']
     s = ['exec-and-forget open -n /System/Applications/System\ Settings.app', 'mode main', 'exec-and-forget sketchybar --trigger aerospace_mode_change MODE=main']
