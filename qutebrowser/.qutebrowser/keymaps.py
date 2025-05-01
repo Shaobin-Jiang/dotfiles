@@ -35,6 +35,8 @@ keymap = {
     "<F12>": "devtools",
     "<Ctrl-c>": "stop",
     "<Ctrl-f>": "hint all hover",
+    "<Ctrl-y>": "hint links yank",
+    "<Ctrl-Shift-f>": "spawn firefox {url}",
     "<Ctrl-g>": "jseval -q document.activeElement.blur()",
     "<Ctrl-Shift-g>": "click-element css body",
     "<Ctrl-q>": "tab-close",
