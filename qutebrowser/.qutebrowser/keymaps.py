@@ -1,3 +1,7 @@
+import os
+HOME = os.environ["HOME"]
+CURSOR_PATH = os.path.join(HOME, ".qutebrowser", "cursor.swift")
+
 unbind = [
     "<Alt-1>",
     "<Alt-2>",
@@ -46,6 +50,12 @@ keymap = {
     "<Ctrl-w>j": "devtools-focus",
     "<Ctrl-w>k": "devtools-focus",
     "<Ctrl-w>l": "devtools-focus",
+    "\\c": f"spawn swift {CURSOR_PATH} center",
+    "\\h": f"spawn swift {CURSOR_PATH} left",
+    "\\j": f"spawn swift {CURSOR_PATH} down",
+    "\\k": f"spawn swift {CURSOR_PATH} up",
+    "\\l": f"spawn swift {CURSOR_PATH} right",
+    "\\\\": f"spawn swift {CURSOR_PATH} click",
 }
 
 # A joke really. Just using keymaps to quickly jump to new pages. Since it is
