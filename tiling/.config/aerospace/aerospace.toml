@@ -100,3 +100,7 @@ automatically-unhide-macos-hidden-apps = true
     if.app-id = 'net.kovidgoyal.kitty'
     if.window-title-regex-substring = '^yazi$'
     run = ['layout floating']
+
+[[on-window-detected]]
+    if.app-name-regex-substring = '^mpv$'
+    run = ['layout floating']

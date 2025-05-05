@@ -39,6 +39,7 @@ keymap = {
     "<F12>": "devtools",
     "<Ctrl-c>": "stop",
     "<Ctrl-f>": "hint all hover",
+    "<Ctrl-m>": "hint video spawn mpv {hint-url} --keep-open=yes --geometry=80%+200+200",
     "<Ctrl-y>": "hint links yank",
     "<Ctrl-Shift-f>": "spawn firefox {url}",
     "<Ctrl-g>": "jseval -q document.activeElement.blur()",

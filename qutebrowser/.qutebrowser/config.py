@@ -9,6 +9,7 @@ c.downloads.remove_finished = 3000
 # Otherwise qutebrowser cannot find kitty!!!
 # To check the PATH in qutebrowser, run `:"debug-pyeval os.environ['PATH']`
 import os
+
 old_path = os.environ["PATH"]
 os.environ["PATH"] = f"/opt/homebrew/bin:{old_path}"
 
@@ -32,6 +33,7 @@ c.content.headers.user_agent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleW
 c.hints.padding = {"bottom": 1, "left": 5, "right": 3, "top": 1}
 c.hints.chars = "asdfghjklzxcvbnm"
 c.hints.border = "none"
+c.hints.selectors["video"] = ["video"]
 
 c.scrolling.bar = "always"
 c.scrolling.smooth = True
@@ -51,4 +53,3 @@ aliases = {
 
 for alias in aliases:
     c.aliases[alias] = aliases[alias]
-
