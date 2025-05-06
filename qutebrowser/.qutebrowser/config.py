@@ -33,6 +33,7 @@ c.content.headers.user_agent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleW
 c.hints.padding = {"bottom": 1, "left": 5, "right": 3, "top": 1}
 c.hints.chars = "asdfghjklzxcvbnm"
 c.hints.border = "none"
+c.hints.selectors["all"].extend([".qutebrowser-custom-hint"])
 c.hints.selectors["video"] = ["video"]
 
 c.scrolling.bar = "always"
