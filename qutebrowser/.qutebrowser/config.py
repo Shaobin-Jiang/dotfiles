@@ -27,8 +27,10 @@ c.editor.command = [
 ]
 
 c.fonts.default_size = "16pt"
+
 c.content.headers.accept_language = "zh-CN;q=0.9,en-US,en;q=0.8"
 c.content.headers.user_agent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+c.content.javascript.clipboard = "access-paste"
 
 c.hints.padding = {"bottom": 1, "left": 5, "right": 3, "top": 1}
 c.hints.chars = "asdfghjklzxcvbnm"
