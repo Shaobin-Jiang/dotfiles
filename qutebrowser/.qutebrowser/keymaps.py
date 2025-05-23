@@ -1,4 +1,5 @@
 import os
+
 HOME = os.environ["HOME"]
 CURSOR_PATH = os.path.join(HOME, ".qutebrowser", "cursor.swift")
 
@@ -57,6 +58,8 @@ keymap = {
     "\\k": f"spawn swift {CURSOR_PATH} up",
     "\\l": f"spawn swift {CURSOR_PATH} right",
     "\\\\": f"spawn swift {CURSOR_PATH} click",
+    "<Ctrl-j>": {"rhs": "completion-item-focus next", "mode": "command"},
+    "<Ctrl-k>": {"rhs": "completion-item-focus prev", "mode": "command"},
 }
 
 # A joke really. Just using keymaps to quickly jump to new pages. Since it is
@@ -76,7 +79,10 @@ for unbind_lhs in unbind:
     config.unbind(unbind_lhs)
 
 for lhs, rhs in keymap.items():
-    config.bind(lhs, rhs)
+    if isinstance(rhs, dict):
+        config.bind(lhs, rhs["rhs"], mode=rhs["mode"])
+    else:
+        config.bind(lhs, rhs)
 
 for suffix, url in really_quick_marks.items():
     config.bind(f"<Space>{suffix}", f"open -t {url}")
