@@ -34,6 +34,6 @@ function yazi() {
 	rm -f -- "$tmp"
 }
 
-fastfetch
+clc
 
 eval "$(starship init zsh)"
