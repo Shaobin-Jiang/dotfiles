@@ -17,6 +17,7 @@ alias ml='conda activate ml'
 alias poetryinit='eval "$(poetry env activate)"'
 alias python='python3'
 alias rmdsstore='rm $HOME/**/.DS_STORE'
+alias uvv='source ./.venv/bin/activate'
 
 # for my neovim tutorials
 # alias nv='XDG_CONFIG_HOME=$HOME/nvim-config/ XDG_DATA_HOME=$HOME/nvim-config/data nvim'
