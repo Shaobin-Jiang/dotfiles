@@ -26,4 +26,10 @@ case $MODE in
                               background.drawing=on \
                               background.color=0xffed886b
         ;;
+    cursor)
+        sketchybar --set $NAME label=cursor \
+                              label.drawing=on \
+                              background.drawing=on \
+                              background.color=0xff250abd
+        ;;
 esac

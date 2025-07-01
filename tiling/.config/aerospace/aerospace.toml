@@ -66,6 +66,7 @@ automatically-unhide-macos-hidden-apps = true
     alt-shift-semicolon = ['mode service', 'exec-and-forget sketchybar --trigger aerospace_mode_change MODE=service']
     alt-r = ['mode resize', 'exec-and-forget sketchybar --trigger aerospace_mode_change MODE=resize']
     alt-a = ['mode launch', 'exec-and-forget sketchybar --trigger aerospace_mode_change MODE=launch']
+    alt-m = ['mode cursor', 'exec-and-forget sketchybar --trigger aerospace_mode_change MODE=cursor']
 
 [mode.service.binding]
     esc = ['reload-config', 'mode main', 'exec-and-forget sketchybar --trigger aerospace_mode_change MODE=main']
@@ -95,6 +96,15 @@ automatically-unhide-macos-hidden-apps = true
     m = ['exec-and-forget open -n /System/Applications/Mail.app', 'mode main', 'exec-and-forget sketchybar --trigger aerospace_mode_change MODE=main']
     s = ['exec-and-forget open -n /System/Applications/System\ Settings.app', 'mode main', 'exec-and-forget sketchybar --trigger aerospace_mode_change MODE=main']
     y = ['exec-and-forget kitty --single-instance -d ~ -e yazi', 'mode main', 'exec-and-forget sketchybar --trigger aerospace_mode_change MODE=main']
+
+[mode.cursor.binding]
+    esc = ['mode main', 'exec-and-forget sketchybar --trigger aerospace_mode_change MODE=main']
+    c = ['exec-and-forget swift $HOME/.config/aerospace/cursor.swift center']
+    h = ['exec-and-forget swift $HOME/.config/aerospace/cursor.swift left']
+    j = ['exec-and-forget swift $HOME/.config/aerospace/cursor.swift down']
+    k = ['exec-and-forget swift $HOME/.config/aerospace/cursor.swift up']
+    l = ['exec-and-forget swift $HOME/.config/aerospace/cursor.swift right']
+    backslash = ['exec-and-forget swift $HOME/.config/aerospace/cursor.swift click']
 
 [[on-window-detected]]
     if.app-id = 'net.kovidgoyal.kitty'

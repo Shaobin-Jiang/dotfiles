@@ -21,7 +21,7 @@ func moveMouse(direction: String?, position: String?) {
             return
         }
     } else if let dir = direction?.lowercased() {
-        let distance: CGFloat = 200
+        let distance: CGFloat = 100
         switch dir {
             case "up":
                 newPoint = NSPoint(x: currentMouseLocation.x, y: currentMouseLocation.y - distance)
