@@ -95,7 +95,7 @@ automatically-unhide-macos-hidden-apps = true
     l = ['exec-and-forget open -n /System/Applications/Launchpad.app', 'mode main', 'exec-and-forget sketchybar --trigger aerospace_mode_change MODE=main']
     m = ['exec-and-forget open -n /System/Applications/Mail.app', 'mode main', 'exec-and-forget sketchybar --trigger aerospace_mode_change MODE=main']
     s = ['exec-and-forget open -n /System/Applications/System\ Settings.app', 'mode main', 'exec-and-forget sketchybar --trigger aerospace_mode_change MODE=main']
-    y = ['exec-and-forget kitty --single-instance -d ~ -e yazi', 'mode main', 'exec-and-forget sketchybar --trigger aerospace_mode_change MODE=main']
+    y = ['exec-and-forget $HOME/.config/aerospace/yazi.sh', 'mode main', 'exec-and-forget sketchybar --trigger aerospace_mode_change MODE=main']
 
 [mode.cursor.binding]
     esc = ['mode main', 'exec-and-forget sketchybar --trigger aerospace_mode_change MODE=main']
