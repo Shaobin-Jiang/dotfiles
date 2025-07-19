@@ -91,11 +91,13 @@ automatically-unhide-macos-hidden-apps = true
     esc = ['mode main', 'exec-and-forget sketchybar --trigger aerospace_mode_change MODE=main']
     b = ['exec-and-forget $HOME/.config/aerospace/focus.sh qutebrowser /Applications/qutebrowser.app', 'mode main', 'exec-and-forget sketchybar --trigger aerospace_mode_change MODE=main']
     shift-b = ['exec-and-forget open -n /Applications/Firefox.app', 'mode main', 'exec-and-forget sketchybar --trigger aerospace_mode_change MODE=main']
+    c = ['exec-and-forget open /System/Applications/Utilities/Digital\ Color\ Meter.app', 'mode main', 'exec-and-forget sketchybar --trigger aerospace_mode_change MODE=main']
     f = ['exec-and-forget open ~', 'mode main', 'exec-and-forget sketchybar --trigger aerospace_mode_change MODE=main']
     l = ['exec-and-forget open -n /System/Applications/Launchpad.app', 'mode main', 'exec-and-forget sketchybar --trigger aerospace_mode_change MODE=main']
     m = ['exec-and-forget open -n /System/Applications/Mail.app', 'mode main', 'exec-and-forget sketchybar --trigger aerospace_mode_change MODE=main']
     s = ['exec-and-forget open -n /System/Applications/System\ Settings.app', 'mode main', 'exec-and-forget sketchybar --trigger aerospace_mode_change MODE=main']
     y = ['exec-and-forget $HOME/.config/aerospace/yazi.sh', 'mode main', 'exec-and-forget sketchybar --trigger aerospace_mode_change MODE=main']
+    alt-c = ['exec-and-forget open /System/Applications/Utilities/Screenshot.app', 'mode main', 'exec-and-forget sketchybar --trigger aerospace_mode_change MODE=main']
 
 [mode.cursor.binding]
     esc = ['mode main', 'exec-and-forget sketchybar --trigger aerospace_mode_change MODE=main']
