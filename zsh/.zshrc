@@ -12,11 +12,12 @@ alias condainit='eval "$(/opt/homebrew/Caskroom/miniconda/base/bin/conda shell.z
 alias fontsize='kitty @ set-font-size' # requires "allow_remote_control yes" in kitty
 alias grep='grep --color=auto'
 alias imshow='kitten icat'
-alias ls='ls --color=auto'
+alias ls='eza --icons'
 alias ml='conda activate ml'
 alias poetryinit='eval "$(poetry env activate)"'
 alias python='python3'
 alias rmdsstore='rm $HOME/**/.DS_STORE'
+alias tree='eza -T --icons'
 alias uvv='source ./.venv/bin/activate'
 
 # for my neovim tutorials
