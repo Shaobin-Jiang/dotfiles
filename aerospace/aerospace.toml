@@ -23,7 +23,7 @@ automatically-unhide-macos-hidden-apps = true
     outer.right =      10
 
 [mode.main.binding]
-    alt-t = 'exec-and-forget kitty --single-instance -d ~'
+    alt-t = 'exec-and-forget $HOME/.config/aerospace/focus.sh Ghostty /Applications/Ghostty.app'
 
     alt-slash = 'layout tiles horizontal vertical'
 

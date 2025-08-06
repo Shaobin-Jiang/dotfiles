@@ -9,6 +9,7 @@ install() {
 
 install $HOME/.config/aerospace aerospace
 install $HOME/.config/fastfetch fastfetch
+install $HOME/.config/ghostty/ ghostty
 install $HOME/.config/kitty kitty
 install $HOME/.qutebrowser qutebrowser
 install $HOME/.config starship

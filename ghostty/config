@@ -1,0 +1,21 @@
+font-size = 16
+adjust-cell-height = 10%
+macos-titlebar-style = hidden
+split-divider-color = white
+theme = Apple System Colors
+
+mouse-hide-while-typing = true
+scrollback-limit = 10000
+clipboard-read = allow
+clipboard-write = allow
+auto-update = off
+macos-option-as-alt = true
+
+unfocused-split-opacity = 0.7
+
+keybind = ctrl+shift+f5=reload_config
+keybind = performable:ctrl+c=copy_to_clipboard
+
+# Handle the pasting using tmux instead
+# Otherwise ctrl + v pasting inside neovim behaves strangely with multiple lines
+# keybind = performable:ctrl+v=paste_from_clipboard
