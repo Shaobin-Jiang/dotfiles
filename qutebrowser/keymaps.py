@@ -31,8 +31,6 @@ keymap = {
     "<Ctrl-8>": "tab-focus 8",
     "<Ctrl-9>": "tab-focus 9",
     "<Ctrl-0>": "tab-focus -1",
-    "<Ctrl-h>": "tab-prev",
-    "<Ctrl-l>": "tab-next",
     "<Ctrl-j>": "forward",
     "<Ctrl-k>": "back",
     "<F12>": "devtools",
@@ -43,13 +41,15 @@ keymap = {
     "<Ctrl-Shift-f>": "spawn firefox {url}",
     "<Ctrl-g>": "jseval -q document.activeElement.blur()",
     "<Ctrl-Shift-g>": "click-element css body",
-    "<Ctrl-q>": "tab-close",
     "<Ctrl-d>": "cmd-run-with-count 15 scroll down",
     "<Ctrl-u>": "cmd-run-with-count 15 scroll up",
     "<Ctrl-w>h": "devtools-focus",
     "<Ctrl-w>j": "devtools-focus",
     "<Ctrl-w>k": "devtools-focus",
     "<Ctrl-w>l": "devtools-focus",
+    "<Space>bd": "tab-close",
+    "<Space>bh": "tab-prev",
+    "<Space>bl": "tab-next",
 }
 
 # A joke really. Just using keymaps to quickly jump to new pages. Since it is
@@ -60,8 +60,9 @@ keymap = {
 # should open the link in the current window.
 really_quick_marks = {
     "gh": "https://github.com",
+    "ge": "https://github.com/explore",
     "zh": "https://zhihu.com",
-    "bl": "https://shaobin-jiang.github.io/blog",
+    "bg": "https://shaobin-jiang.github.io/blog",
     "ds": "https://chat.deepseek.com",
 }
 
