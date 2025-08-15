@@ -13,7 +13,7 @@ $git_branch\
 [](fg:color_git bg:color_time)\
 $time\
 [](fg:color_time)\
-$line_break$character"""
+$line_break$status$character"""
 
 palette = 'custom'
 
@@ -36,6 +36,7 @@ Windows = "󰍲"
 Linux = "󰌽"
 Arch = "󰣇"
 EndeavourOS = "󰣇"
+Macos = ""
 
 [username]
 show_always = true
@@ -81,5 +82,10 @@ disabled = false
 
 [character]
 disabled = false
-success_symbol = '[>](bold fg:color_success)'
-error_symbol = '[>](bold fg:color_fail)'
+success_symbol = '[](bold fg:color_success)'
+error_symbol = '[](bold fg:color_fail)'
+
+[status]
+disabled = false
+format = "[$symbol]($style) "
+symbol = ""
