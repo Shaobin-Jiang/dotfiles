@@ -104,5 +104,6 @@ sketchybar --add bracket ime-bracket ime \
 
 ##### Force all scripts to run the first time (never do this in a script) #####
 sketchybar --update
+sketchybar --set space.$(aerospace list-workspaces --focused) background.color=0xffd0eff7 label.color=0xff363636
 
 $CONFIG_DIR/helpers/ime-0615
