@@ -11,6 +11,8 @@ unbind = [
     "<Alt-7>",
     "<Alt-8>",
     "<Alt-9>",
+    "<Ctrl-h>",
+    "<Ctrl-q>",
     "<Ctrl-s>",
     "<Ctrl-w>",
     "d",
@@ -64,6 +66,7 @@ really_quick_marks = {
     "zh": "https://zhihu.com",
     "bg": "https://shaobin-jiang.github.io/blog",
     "ds": "https://chat.deepseek.com",
+    "em": "file:///Users/phantoms/Emacs/emacs/index.html",
 }
 
 for unbind_lhs in unbind:
