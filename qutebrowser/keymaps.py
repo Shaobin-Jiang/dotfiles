@@ -23,16 +23,6 @@ unbind = [
 ]
 
 keymap = {
-    "<Ctrl-1>": "tab-focus 1",
-    "<Ctrl-2>": "tab-focus 2",
-    "<Ctrl-3>": "tab-focus 3",
-    "<Ctrl-4>": "tab-focus 4",
-    "<Ctrl-5>": "tab-focus 5",
-    "<Ctrl-6>": "tab-focus 6",
-    "<Ctrl-7>": "tab-focus 7",
-    "<Ctrl-8>": "tab-focus 8",
-    "<Ctrl-9>": "tab-focus 9",
-    "<Ctrl-0>": "tab-focus -1",
     "<Ctrl-j>": "forward",
     "<Ctrl-k>": "back",
     "<F12>": "devtools",
@@ -52,6 +42,16 @@ keymap = {
     "<Space>bd": "tab-close",
     "<Space>bh": "tab-prev",
     "<Space>bl": "tab-next",
+    "<Space>b1": "tab-focus 1",
+    "<Space>b2": "tab-focus 2",
+    "<Space>b3": "tab-focus 3",
+    "<Space>b4": "tab-focus 4",
+    "<Space>b5": "tab-focus 5",
+    "<Space>b6": "tab-focus 6",
+    "<Space>b7": "tab-focus 7",
+    "<Space>b8": "tab-focus 8",
+    "<Space>b9": "tab-focus 9",
+    "<Space>b0": "tab-focus -1",
 }
 
 # A joke really. Just using keymaps to quickly jump to new pages. Since it is
