@@ -63,13 +63,14 @@ automatically-unhide-macos-hidden-apps = true
     alt-tab = 'workspace-back-and-forth'
     alt-shift-tab = 'move-workspace-to-monitor --wrap-around next'
 
-    alt-shift-semicolon = ['mode service', 'exec-and-forget sketchybar --trigger aerospace_mode_change MODE=service']
+    alt-semicolon = ['mode service', 'exec-and-forget sketchybar --trigger aerospace_mode_change MODE=service']
     alt-r = ['mode resize', 'exec-and-forget sketchybar --trigger aerospace_mode_change MODE=resize']
     alt-a = ['mode launch', 'exec-and-forget sketchybar --trigger aerospace_mode_change MODE=launch']
     alt-m = ['mode cursor', 'exec-and-forget sketchybar --trigger aerospace_mode_change MODE=cursor']
 
 [mode.service.binding]
     esc = ['reload-config', 'mode main', 'exec-and-forget sketchybar --trigger aerospace_mode_change MODE=main']
+    f5 = ['exec-and-forget sketchybar --reload', 'mode main', 'exec-and-forget sketchybar --trigger aerospace_mode_change MODE=main']
     r = ['flatten-workspace-tree', 'mode main', 'exec-and-forget sketchybar --trigger aerospace_mode_change MODE=main'] # reset layout
     f = ['layout floating tiling', 'mode main', 'exec-and-forget sketchybar --trigger aerospace_mode_change MODE=main'] # Toggle between floating and tiling layout
     backspace = ['close-all-windows-but-current', 'mode main', 'exec-and-forget sketchybar --trigger aerospace_mode_change MODE=main']
@@ -110,7 +111,6 @@ automatically-unhide-macos-hidden-apps = true
 
 [[on-window-detected]]
     if.app-id = 'net.kovidgoyal.kitty'
-    if.window-title-regex-substring = '^yazi$'
     run = ['layout floating']
 
 [[on-window-detected]]
