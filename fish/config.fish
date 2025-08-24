@@ -1,5 +1,9 @@
 # Make sure fish is in /etc/shells before calling chsh
 
+if status is-login
+    /opt/homebrew/bin/brew shellenv | source
+end
+
 set fish_greeting
 set -x EDITOR nvim
 
