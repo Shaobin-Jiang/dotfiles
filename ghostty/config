@@ -3,6 +3,8 @@ adjust-cell-height = 10%
 macos-titlebar-style = hidden
 theme = Apple System Colors
 
+background-opacity = 0.9
+
 mouse-hide-while-typing = true
 scrollback-limit = 10000
 clipboard-read = allow
