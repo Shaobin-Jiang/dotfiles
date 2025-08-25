@@ -13,7 +13,9 @@ set -x HOMEBREW_INSTALL_FROM_API 1
 set -x HOMEBREW_API_DOMAIN https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/api
 set -x HOMEBREW_BOTTLE_DOMAIN https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles
 
-clc
+if not string match -q "xterm-256color" $TERM
+    clc
+end
 
 starship init fish | source
 
