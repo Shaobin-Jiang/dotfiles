@@ -13,6 +13,15 @@ set -x HOMEBREW_INSTALL_FROM_API 1
 set -x HOMEBREW_API_DOMAIN https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/api
 set -x HOMEBREW_BOTTLE_DOMAIN https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles
 
+set -x PUB_HOSTED_URL "https://pub.flutter-io.cn"
+set -x FLUTTER_STORAGE_BASE_URL "https://storage.flutter-io.cn"
+
+set -x PATH "/opt/flutter/bin:$PATH"
+
+abbr --add adbls "adb shell ls /sdcard"
+abbr --add adbps "adb push /sdcard/"
+abbr --add adbpl --set-cursor "adb pull % /sdcard/"
+
 if not string match -q "xterm-256color" $TERM
     clc
 end
