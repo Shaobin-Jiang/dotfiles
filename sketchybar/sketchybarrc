@@ -80,8 +80,8 @@ sketchybar --add item clock right \
                        script="$PLUGIN_DIR/clock.sh" \
                        click_script="osascript $CONFIG_DIR/helpers/clock.applescript"
 
-sketchybar --add alias "控制中心,BentoBox" right \
-           --set "控制中心,BentoBox" click_script="osascript $CONFIG_DIR/helpers/control.applescript"
+sketchybar --add alias "控制中心,BentoBox-0" right \
+           --set "控制中心,BentoBox-0" click_script="osascript $CONFIG_DIR/helpers/control.applescript"
 
 sketchybar --add alias "控制中心,WiFi" right \
            --set "控制中心,WiFi" click_script="osascript $CONFIG_DIR/helpers/wifi.applescript"
