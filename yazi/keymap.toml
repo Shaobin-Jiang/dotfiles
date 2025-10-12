@@ -66,3 +66,23 @@ desc = "Paste from clipboard"
 on = ["g", "v"]
 run = "cd /Volumes/Phantoms/"
 desc = "Go /Volumes/Phantoms/"
+
+[[mgr.prepend_keymap]]
+on = "<C-n>"
+run = "tab_create --current"
+desc = "Open new tab"
+
+[[mgr.prepend_keymap]]
+on = ["<Space>", "b", "h"]
+run = "tab_switch --relative -1"
+desc = "Switch to tab on the left"
+
+[[mgr.prepend_keymap]]
+on = ["<Space>", "b", "l"]
+run = "tab_switch --relative 1"
+desc = "Switch to tab on the right"
+
+[[mgr.prepend_keymap]]
+on = ["<Space>", "b", "d"]
+run = "close"
+desc = "Close current tab"
