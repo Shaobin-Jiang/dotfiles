@@ -97,6 +97,7 @@ automatically-unhide-macos-hidden-apps = true
     m = ['exec-and-forget open -n /System/Applications/Mail.app', 'mode main', 'exec-and-forget sketchybar --trigger aerospace_mode_change MODE=main']
     s = ['exec-and-forget open -n /System/Applications/System\ Settings.app', 'mode main', 'exec-and-forget sketchybar --trigger aerospace_mode_change MODE=main']
     y = ['exec-and-forget $HOME/.config/aerospace/yazi.sh', 'mode main', 'exec-and-forget sketchybar --trigger aerospace_mode_change MODE=main']
+    z = ['exec-and-forget $HOME/.config/aerospace/focus.sh Zotero /Applications/Zotero.app', 'mode main', 'exec-and-forget sketchybar --trigger aerospace_mode_change MODE=main']
     alt-c = ['exec-and-forget open /System/Applications/Utilities/Screenshot.app', 'mode main', 'exec-and-forget sketchybar --trigger aerospace_mode_change MODE=main']
 
 [mode.cursor.binding]
