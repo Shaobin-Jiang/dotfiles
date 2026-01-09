@@ -4,5 +4,5 @@
 # the item invoking this script:
 # https://felixkratz.github.io/SketchyBar/config/events#events-and-scripting
 
-sketchybar --set "$NAME" label="$(LC_TIME=en_US.UTF-8 date '+%m-%d %a %H:%M')"
+sketchybar --set "$NAME" label="$(LC_TIME=en_US.UTF-8 date '+%m-%d  %a  %H:%M')"
 

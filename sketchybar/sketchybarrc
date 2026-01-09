@@ -13,7 +13,7 @@ sketchybar --bar "${bar[@]}"
 
 default=(
   icon.font="JetBrainsMono Nerd Font:Bold:17.0"
-  label.font="JetBrainsMono Nerd Font:Bold:14.0"
+  label.font="m6x11plus:Regular:20.0"
   icon.color=0xffffffff
   label.color=0xffffffff
 )
@@ -33,7 +33,7 @@ for sid in $(aerospace list-workspaces --all); do
                                 background.height=16 \
                                 background.drawing=off \
                                 label="$sid" \
-                                label.font.size=12.0 \
+                                label.font.size=16.0 \
                                 label.padding_left=4 \
                                 label.padding_right=5 \
                                 padding_left=4 \
