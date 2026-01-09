@@ -84,17 +84,22 @@ sketchybar --add alias "控制中心,BentoBox-0" right \
            --set "控制中心,BentoBox-0" click_script="osascript $CONFIG_DIR/helpers/control.applescript"
 
 sketchybar --add alias "控制中心,WiFi" right \
-           --set "控制中心,WiFi" click_script="osascript $CONFIG_DIR/helpers/wifi.applescript"
-            
-sketchybar --add alias "AlDente,Item-0" right \
-           --set "AlDente,Item-0" click_script="osascript $CONFIG_DIR/helpers/aldente.applescript" \
-                                  padding_left=10
+           --set "控制中心,WiFi" click_script="osascript $CONFIG_DIR/helpers/wifi.applescript" \
+                                 padding_left=10
 
 sketchybar --add item ime right \
            --set ime label=A \
                      label.align=center \
                      label.width=30 \
                      label.font="苹方-简:Bold:12.0" \
+            
+sketchybar --add item battery_percentage right \
+           --add item battery_status right \
+           --set battery_percentage update_freq=30 \
+                                    script="$PLUGIN_DIR/battery.sh" \
+                                    click_script="osascript $CONFIG_DIR/helpers/aldente.applescript" \
+                                    padding_left=5 \
+                                    padding_right=20
 
 # For some unknown reason, setting border for the label does not work
 sketchybar --add bracket ime-bracket ime \
