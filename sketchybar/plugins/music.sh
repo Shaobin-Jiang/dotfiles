@@ -5,6 +5,8 @@ INFO_FILE="/tmp/music_info.txt"
 # Check if Music app is running
 if ! pgrep -x Music > /dev/null; then 
     sketchybar --set music drawing=off
+    sketchybar --set music_next drawing=off
+    sketchybar --set music_prev drawing=off
     exit 0
 fi
 
@@ -32,9 +34,15 @@ if [[ -f "$INFO_FILE" ]] && [[ -s "$INFO_FILE" ]]; then
         
         # For some reason, if I do not add something at the end, the text would be cropped.
         sketchybar --set music icon="$ICON" label="  $LABEL 1" drawing=on
+        sketchybar --set music_next drawing=on
+        sketchybar --set music_prev drawing=on
     else
         sketchybar --set music drawing=off
+        sketchybar --set music_next drawing=off
+        sketchybar --set music_prev drawing=off
     fi
 else
     sketchybar --set music drawing=off
+    sketchybar --set music_next drawing=off
+    sketchybar --set music_prev drawing=off
 fi
