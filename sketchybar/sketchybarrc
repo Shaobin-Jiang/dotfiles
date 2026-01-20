@@ -38,7 +38,7 @@ for sid in $(aerospace list-workspaces --all); do
                                 label.padding_right=5 \
                                 padding_left=4 \
                                 padding_right=4 \
-                                script="$CONFIG_DIR/plugins/aerospace.sh $sid"
+                                script="$PLUGIN_DIR/aerospace.sh $sid"
 done
 sketchybar --set space.1 padding_left=8
 sketchybar --set space.9 padding_right=8
@@ -73,7 +73,7 @@ sketchybar --add item aerospace_mode left \
                                 background.height=25 \
                                 padding_left=10 \
                                 width=70 \
-                                script="$CONFIG_DIR/plugins/aerospace-mode.sh"
+                                script="$PLUGIN_DIR/aerospace-mode.sh"
 
 sketchybar --add item clock right \
            --set clock update_freq=1 \
@@ -92,14 +92,6 @@ sketchybar --add item ime right \
                      label.align=center \
                      label.width=30 \
                      label.font="苹方-简:Bold:12.0" \
-            
-sketchybar --add item battery_percentage right \
-           --add item battery_status right \
-           --set battery_percentage update_freq=30 \
-                                    script="$PLUGIN_DIR/battery.sh" \
-                                    click_script="osascript $CONFIG_DIR/helpers/aldente.applescript" \
-                                    padding_left=5 \
-                                    padding_right=20
 
 # For some unknown reason, setting border for the label does not work
 sketchybar --add bracket ime-bracket ime \
@@ -108,6 +100,46 @@ sketchybar --add bracket ime-bracket ime \
                         background.border_width=1 \
                         background.border_color=0xffffffff \
                         background.height=20
+            
+sketchybar --add item battery_percentage right \
+           --add item battery_status right \
+           --set battery_percentage update_freq=30 \
+                                    script="$PLUGIN_DIR/battery.sh" \
+                                    click_script="osascript $CONFIG_DIR/helpers/aldente.applescript" \
+                                    padding_left=5 \
+                                    padding_right=20 \
+           --set battery_status padding_left=20
+
+# Credit to https://github.com/FelixKratz/SketchyBar/discussions/12#discussioncomment-14632701
+if ! pgrep -f music_monitor_file > /dev/null; then
+    $CONFIG_DIR/helpers/music_monitor_file > /dev/null 2>&1 &
+fi
+
+sketchybar --add item music_next right \
+           --set music_next click_script="osascript $CONFIG_DIR/helpers/music_next.applescript" \
+                 icon="󰒭" \
+                 padding_left=15 \
+                 padding_right=10
+
+sketchybar --add item music right \
+           --set music script="$PLUGIN_DIR/music.sh" \
+                       click_script="osascript $CONFIG_DIR/helpers/music_click.applescript" \
+                       update_freq=2 \
+                       updates=on \
+                       drawing=off
+
+sketchybar --add item music_prev right \
+           --set music_prev click_script="osascript $CONFIG_DIR/helpers/music_prev.applescript" \
+                 icon="󰒮" \
+                 padding_left=10 \
+                 padding_right=15
+
+sketchybar --add bracket apple_music '/music.*/' \
+           --set apple_music background.color=0xffef6a78 \
+                        background.corner_radius=4 \
+                        background.border_width=1 \
+                        background.border_color=0xffffffff \
+                        background.height=25
 
 ##### Force all scripts to run the first time (never do this in a script) #####
 sketchybar --update
