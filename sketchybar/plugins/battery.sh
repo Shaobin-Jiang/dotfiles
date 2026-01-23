@@ -8,10 +8,11 @@ PERCENTAGE=$(pmset -g batt | grep -Eo '[0-9]+%' | head -n1 | tr -d '%')
 STATUS=$(pmset -g batt | awk -F'; *' 'NR==2{print $2}') # charging / discharging / charged
 
 case $STATUS in
-  charging)    color='0xff53abf2' ;;
-  discharging) color='0xffffffff' ;;
-  charged)     color='0xff53f2ab' ;;
-  *)           color='0xffffffff' ;;
+  charging)           color='0xff53abf2' ;;
+  "finishing charge") color='0xff53abf2' ;;
+  discharging)        color='0xffffffff' ;;
+  charged)            color='0xff53f2ab' ;;
+  *)                  color='0xffffffff' ;;
 esac
 
 if [ $PERCENTAGE -ge 100 ]; then p_char=󰁹
