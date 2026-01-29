@@ -32,4 +32,10 @@ case $MODE in
                               background.drawing=on \
                               background.color=0xff250abd
         ;;
+    music)
+        sketchybar --set $NAME label=music \
+                              label.drawing=on \
+                              background.drawing=on \
+                              background.color=0xffea343c
+        ;;
 esac

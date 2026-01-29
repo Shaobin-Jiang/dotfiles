@@ -66,7 +66,8 @@ automatically-unhide-macos-hidden-apps = true
     alt-semicolon = ['mode service', 'exec-and-forget sketchybar --trigger aerospace_mode_change MODE=service']
     alt-r = ['mode resize', 'exec-and-forget sketchybar --trigger aerospace_mode_change MODE=resize']
     alt-a = ['mode launch', 'exec-and-forget sketchybar --trigger aerospace_mode_change MODE=launch']
-    alt-m = ['mode cursor', 'exec-and-forget sketchybar --trigger aerospace_mode_change MODE=cursor']
+    alt-m = ['mode music', 'exec-and-forget sketchybar --trigger aerospace_mode_change MODE=music']
+    alt-shift-m = ['mode cursor', 'exec-and-forget sketchybar --trigger aerospace_mode_change MODE=cursor']
 
 [mode.service.binding]
     esc = ['reload-config', 'mode main', 'exec-and-forget sketchybar --trigger aerospace_mode_change MODE=main']
@@ -95,6 +96,7 @@ automatically-unhide-macos-hidden-apps = true
     c = ['exec-and-forget open /System/Applications/Utilities/Digital\ Color\ Meter.app', 'mode main', 'exec-and-forget sketchybar --trigger aerospace_mode_change MODE=main']
     f = ['exec-and-forget open ~', 'mode main', 'exec-and-forget sketchybar --trigger aerospace_mode_change MODE=main']
     m = ['exec-and-forget open -n /System/Applications/Mail.app', 'mode main', 'exec-and-forget sketchybar --trigger aerospace_mode_change MODE=main']
+    shift-m = ['exec-and-forget open /System/Applications/Music.app', 'mode main', 'exec-and-forget sketchybar --trigger aerospace_mode_change MODE=main']
     s = ['exec-and-forget open -n /System/Applications/System\ Settings.app', 'mode main', 'exec-and-forget sketchybar --trigger aerospace_mode_change MODE=main']
     y = ['exec-and-forget $HOME/.config/aerospace/yazi.sh', 'mode main', 'exec-and-forget sketchybar --trigger aerospace_mode_change MODE=main']
     z = ['exec-and-forget $HOME/.config/aerospace/focus.sh Zotero /Applications/Zotero.app', 'mode main', 'exec-and-forget sketchybar --trigger aerospace_mode_change MODE=main']
@@ -108,6 +110,12 @@ automatically-unhide-macos-hidden-apps = true
     k = ['exec-and-forget swift $HOME/.config/aerospace/cursor.swift up']
     l = ['exec-and-forget swift $HOME/.config/aerospace/cursor.swift right']
     backslash = ['exec-and-forget swift $HOME/.config/aerospace/cursor.swift click']
+
+[mode.music.binding]
+    esc = ['mode main', 'exec-and-forget sketchybar --trigger aerospace_mode_change MODE=main']
+    h = ['exec-and-forget osascript $HOME/.config/sketchybar/helpers/music_prev.applescript', 'mode main', 'exec-and-forget sketchybar --trigger aerospace_mode_change MODE=main']
+    l = ['exec-and-forget osascript $HOME/.config/sketchybar/helpers/music_next.applescript', 'mode main', 'exec-and-forget sketchybar --trigger aerospace_mode_change MODE=main']
+    space = ['exec-and-forget osascript $HOME/.config/sketchybar/helpers/music_click.applescript', 'mode main', 'exec-and-forget sketchybar --trigger aerospace_mode_change MODE=main']
 
 [[on-window-detected]]
     if.app-id = 'net.kovidgoyal.kitty'
