@@ -27,6 +27,29 @@ function nh() {
 	nohup $* >/dev/null 2>&1 &
 }
 
+function eject() {
+    # local mount_points=("/Volumes/ExFat/" "/Volumes/Portable" "/Volumes/Phantoms")
+    local mount_points=("/Volumes/Portable")
+    local ejected_any=false
+
+    for mp in "${mount_points[@]}"; do
+        if [[ -d "$mp" ]]; then
+            if hdiutil eject "$mp"; then
+                echo "✅ $mp ejected."
+                ejected_any=true
+            else
+                echo "❌ $mp failes to eject." >&2
+            fi
+        else
+            echo "⚠️ $mp not mounted." >&2
+        fi
+    done
+
+    if ! $ejected_any; then
+        echo "No disks to eject."
+    fi
+}
+
 function yazi() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
 	command yazi "$@" --cwd-file="$tmp"
