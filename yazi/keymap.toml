@@ -86,3 +86,8 @@ desc = "Switch to tab on the right"
 on = ["<Space>", "b", "d"]
 run = "close"
 desc = "Close current tab"
+
+[[mgr.prepend_keymap]]
+on = "o"
+run = "shell 'open %s' --block"
+desc = "Open with system `open`"
