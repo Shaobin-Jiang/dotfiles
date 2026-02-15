@@ -1,3 +1,5 @@
 yazi/plugins
 qutebrowser/bookmarks
 fish/fish_variables
+fish/completions
+fish/conf.d
