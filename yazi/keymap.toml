@@ -50,10 +50,6 @@ desc = "Compress with ouch"
 
 [[mgr.prepend_keymap]]
 on = "<C-y>"
-run = ["plugin system-clipboard"]
-
-[[mgr.prepend_keymap]]
-on = "<C-y>"
 run = "plugin system-clipboard"
 desc = "Copy to clipboard"
 
