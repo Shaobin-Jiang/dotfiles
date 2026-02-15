@@ -47,8 +47,8 @@ automatically-unhide-macos-hidden-apps = true
     alt-5 = 'workspace 5'
     alt-6 = 'workspace 6'
     alt-7 = 'workspace 7'
-    alt-8 = 'workspace 8'
-    alt-9 = 'workspace 9'
+    alt-8 = ['workspace 8', 'move-workspace-to-monitor up']
+    alt-9 = ['workspace 9', 'move-workspace-to-monitor right']
 
     alt-shift-1 = ['move-node-to-workspace 1', 'workspace 1']
     alt-shift-2 = ['move-node-to-workspace 2', 'workspace 2']
@@ -57,8 +57,8 @@ automatically-unhide-macos-hidden-apps = true
     alt-shift-5 = ['move-node-to-workspace 5', 'workspace 5']
     alt-shift-6 = ['move-node-to-workspace 6', 'workspace 6']
     alt-shift-7 = ['move-node-to-workspace 7', 'workspace 7']
-    alt-shift-8 = ['move-node-to-workspace 8', 'workspace 8']
-    alt-shift-9 = ['move-node-to-workspace 9', 'workspace 9']
+    alt-shift-8 = ['move-node-to-workspace 8', 'workspace 8', 'move-workspace-to-monitor up']
+    alt-shift-9 = ['move-node-to-workspace 9', 'workspace 9', 'move-workspace-to-monitor right']
 
     alt-tab = 'workspace-back-and-forth'
     alt-shift-tab = 'move-workspace-to-monitor --wrap-around next'
@@ -91,9 +91,9 @@ automatically-unhide-macos-hidden-apps = true
 
 [mode.launch.binding]
     esc = ['mode main', 'exec-and-forget sketchybar --trigger aerospace_mode_change MODE=main']
-    b = ['exec-and-forget $HOME/.config/aerospace/focus.sh qutebrowser /Applications/qutebrowser.app', 'mode main', 'exec-and-forget sketchybar --trigger aerospace_mode_change MODE=main']
-    shift-b = ['exec-and-forget open -n /Applications/Firefox.app', 'mode main', 'exec-and-forget sketchybar --trigger aerospace_mode_change MODE=main']
+    b = ['exec-and-forget $HOME/.config/aerospace/focus.sh "Google Chrome" /Applications/Google\ Chrome.app', 'mode main', 'exec-and-forget sketchybar --trigger aerospace_mode_change MODE=main']
     c = ['exec-and-forget open /System/Applications/Utilities/Digital\ Color\ Meter.app', 'mode main', 'exec-and-forget sketchybar --trigger aerospace_mode_change MODE=main']
+    e = ['exec-and-forget $HOME/.config/aerospace/focus.sh Emacs /Applications/Emacs.app', 'mode main', 'exec-and-forget sketchybar --trigger aerospace_mode_change MODE=main']
     f = ['exec-and-forget open ~', 'mode main', 'exec-and-forget sketchybar --trigger aerospace_mode_change MODE=main']
     m = ['exec-and-forget open -n /System/Applications/Mail.app', 'mode main', 'exec-and-forget sketchybar --trigger aerospace_mode_change MODE=main']
     shift-m = ['exec-and-forget open /System/Applications/Music.app', 'mode main', 'exec-and-forget sketchybar --trigger aerospace_mode_change MODE=main']
@@ -123,4 +123,8 @@ automatically-unhide-macos-hidden-apps = true
 
 [[on-window-detected]]
     if.app-name-regex-substring = '^mpv$'
+    run = ['layout floating']
+
+[[on-window-detected]]
+    if.app-id = 'com.apple.Music'
     run = ['layout floating']
