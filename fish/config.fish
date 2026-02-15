@@ -6,6 +6,7 @@ end
 
 set fish_greeting
 set -x EDITOR nvim
+set -x XDG_CONFIG_HOME $HOME/.config
 
 set -x HOMEBREW_BREW_GIT_REMOTE https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/brew.git
 set -x HOMEBREW_CORE_GIT_REMOTE https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-core.git
@@ -16,7 +17,9 @@ set -x HOMEBREW_BOTTLE_DOMAIN https://mirrors.tuna.tsinghua.edu.cn/homebrew-bott
 set -x PUB_HOSTED_URL "https://pub.flutter-io.cn"
 set -x FLUTTER_STORAGE_BASE_URL "https://storage.flutter-io.cn"
 
-set -x PATH "/opt/flutter/bin:$PATH"
+fish_add_path -pP $HOME/.cargo/bin
+fish_add_path -pP /opt/flutter/bin
+fish_add_path -aP $HOME/.orbstack/bin
 
 abbr --add adbls "adb shell ls /sdcard"
 abbr --add adbps "adb push /sdcard/"
