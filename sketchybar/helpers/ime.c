@@ -23,6 +23,10 @@ void callback(CFRunLoopTimerRef timer, void *info) {
   if (strcmp(buffer, "com.apple.inputmethod.SCIM.ITABC\n") == 0) {
     sketchybar("--set ime label=拼");
   }
+
+  if (strcmp(buffer, "com.apple.inputmethod.Kotoeri.RomajiTyping.Japanese\n") == 0) {
+    sketchybar("--set ime label=あ");
+  }
 }
 
 int count_process() {

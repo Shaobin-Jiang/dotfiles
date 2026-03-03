@@ -68,6 +68,7 @@ automatically-unhide-macos-hidden-apps = true
     alt-a = ['mode launch', 'exec-and-forget sketchybar --trigger aerospace_mode_change MODE=launch']
     alt-m = ['mode music', 'exec-and-forget sketchybar --trigger aerospace_mode_change MODE=music']
     alt-shift-m = ['mode cursor', 'exec-and-forget sketchybar --trigger aerospace_mode_change MODE=cursor']
+	alt-i = ['mode im', 'exec-and-forget sketchybar --trigger aerospace_mode_change MODE=im']
 
 [mode.service.binding]
     esc = ['reload-config', 'mode main', 'exec-and-forget sketchybar --trigger aerospace_mode_change MODE=main']
@@ -116,6 +117,13 @@ automatically-unhide-macos-hidden-apps = true
     h = ['exec-and-forget osascript $HOME/.config/sketchybar/helpers/music_prev.applescript', 'mode main', 'exec-and-forget sketchybar --trigger aerospace_mode_change MODE=main']
     l = ['exec-and-forget osascript $HOME/.config/sketchybar/helpers/music_next.applescript', 'mode main', 'exec-and-forget sketchybar --trigger aerospace_mode_change MODE=main']
     space = ['exec-and-forget osascript $HOME/.config/sketchybar/helpers/music_click.applescript', 'mode main', 'exec-and-forget sketchybar --trigger aerospace_mode_change MODE=main']
+
+[mode.im.binding]
+    esc = ['mode main', 'exec-and-forget sketchybar --trigger aerospace_mode_change MODE=main']
+	e = ['exec-and-forget macism com.apple.keylayout.ABC', 'mode main', 'exec-and-forget sketchybar --trigger aerospace_mode_change MODE=main']
+	space = ['exec-and-forget macism com.apple.keylayout.ABC', 'mode main', 'exec-and-forget sketchybar --trigger aerospace_mode_change MODE=main']
+	n = ['exec-and-forget macism com.apple.inputmethod.Kotoeri.RomajiTyping.Japanese', 'mode main', 'exec-and-forget sketchybar --trigger aerospace_mode_change MODE=main']
+	z = ['exec-and-forget macism com.apple.inputmethod.SCIM.ITABC', 'mode main', 'exec-and-forget sketchybar --trigger aerospace_mode_change MODE=main']
 
 [[on-window-detected]]
     if.app-id = 'net.kovidgoyal.kitty'
