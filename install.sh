@@ -12,7 +12,7 @@ install $HOME/.config/fastfetch fastfetch
 install $HOME/.config/fish fish
 install $HOME/.config/ghostty/ ghostty
 install $HOME/.config/kitty kitty
-install $HOME/.qutebrowser qutebrowser
+# install $HOME/.qutebrowser qutebrowser
 install $HOME/.config starship
 install $HOME/.config/sketchybar sketchybar
 install $HOME tmux
