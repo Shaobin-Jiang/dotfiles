@@ -49,6 +49,14 @@ run = "plugin ouch"
 desc = "Compress with ouch"
 
 [[mgr.prepend_keymap]]
+on = ["<Space>", "u"]
+# It is crucial that we have unzip and p7zip installed via homebrew
+# The unzip ported with MacOS does not have -O
+# The zip provided by MacOS is buggy and generates garbled text
+run = "shell 'mkdir -p ~/.yazi-unzip; /opt/homebrew/opt/unzip/bin/unzip -O gbk %s -d ~/.yazi-unzip; rm %s; cd ~/.yazi-unzip; 7z a -tzip -mcu %s *; cd ~; rm -rf ~/.yazi-unzip'"
+desc = "Change zip to utf-8 encoding"
+
+[[mgr.prepend_keymap]]
 on = "<C-y>"
 run = "plugin system-clipboard"
 desc = "Copy to clipboard"
