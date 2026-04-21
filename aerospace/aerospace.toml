@@ -73,6 +73,7 @@ automatically-unhide-macos-hidden-apps = true
 [mode.service.binding]
     esc = ['reload-config', 'mode main', 'exec-and-forget sketchybar --trigger aerospace_mode_change MODE=main']
     f5 = ['exec-and-forget sketchybar --reload', 'mode main', 'exec-and-forget sketchybar --trigger aerospace_mode_change MODE=main']
+    m = ['exec-and-forget osascript $HOME/.config/sketchybar/helpers/menubar.applescript', 'mode main', 'exec-and-forget sketchybar --trigger aerospace_mode_change MODE=main']
     r = ['flatten-workspace-tree', 'mode main', 'exec-and-forget sketchybar --trigger aerospace_mode_change MODE=main'] # reset layout
     f = ['layout floating tiling', 'mode main', 'exec-and-forget sketchybar --trigger aerospace_mode_change MODE=main'] # Toggle between floating and tiling layout
     backspace = ['close-all-windows-but-current', 'mode main', 'exec-and-forget sketchybar --trigger aerospace_mode_change MODE=main']
