@@ -58,6 +58,7 @@ function yazi() {
 	fi
 	rm -f -- "$tmp"
 }
+alias y='yazi'
 
 clc
 

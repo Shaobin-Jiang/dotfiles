@@ -3,9 +3,9 @@ linemode = "size_and_mtime"
 
 [open]
 prepend_rules = [
-    { name = "*.docx", use = "open"},
-    { name = "*.mp4", use = "open"},
-    { name = "*.pptx", use = "open"},
+    { url = "*.docx", use = "open"},
+    { url = "*.mp4", use = "open"},
+    { url = "*.pptx", use = "open"},
 ]
 
 [opener]
