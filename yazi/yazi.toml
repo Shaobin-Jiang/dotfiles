@@ -4,7 +4,7 @@ linemode = "size_and_mtime"
 [open]
 prepend_rules = [
     { url = "*.docx", use = "open"},
-    { url = "*.mp4", use = "open"},
+    { mime = "video/*", use = "video"},
     { url = "*.pptx", use = "open"},
 ]
 
@@ -12,6 +12,9 @@ prepend_rules = [
 extract = [
 	{ run = 'ouch d -y "%*"', desc = "Extract here with ouch", for = "windows" },
 	{ run = 'ouch d -y "$@"', desc = "Extract here with ouch", for = "unix" },
+]
+video = [
+    { run = 'vlc "$@"', desc = "Open in VLC", orphan = true, for = "unix" }
 ]
 
 [[plugin.prepend_previewers]]
