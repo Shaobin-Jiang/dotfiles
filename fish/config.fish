@@ -8,12 +8,6 @@ set fish_greeting
 set -x EDITOR nvim
 set -x XDG_CONFIG_HOME $HOME/.config
 
-set -x HOMEBREW_BREW_GIT_REMOTE https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/brew.git
-set -x HOMEBREW_CORE_GIT_REMOTE https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-core.git
-set -x HOMEBREW_INSTALL_FROM_API 1
-set -x HOMEBREW_API_DOMAIN https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/api
-set -x HOMEBREW_BOTTLE_DOMAIN https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles
-
 set -x PUB_HOSTED_URL "https://pub.flutter-io.cn"
 set -x FLUTTER_STORAGE_BASE_URL "https://storage.flutter-io.cn"
 
