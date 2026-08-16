@@ -20,3 +20,10 @@ video = [
 [[plugin.prepend_previewers]]
 mime = "application/{*zip,tar,bzip2,7z*,rar,xz,zstd,java-archive}"
 run  = "ouch --show-file-icons"
+
+[preview]
+# The instruction in the doc is wrong; ya cache clear is nonexistent
+# Run yazi --clear-cache for this to work
+max_width = 2000
+max_height = 2000
+image_quality = 50
