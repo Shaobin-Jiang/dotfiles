@@ -97,8 +97,8 @@ automatically-unhide-macos-hidden-apps = true
     c = ['exec-and-forget open /System/Applications/Utilities/Digital\ Color\ Meter.app', 'mode main', 'exec-and-forget sketchybar --trigger aerospace_mode_change MODE=main']
     e = ['exec-and-forget $HOME/.config/aerospace/focus.sh Emacs /Applications/Emacs.app', 'mode main', 'exec-and-forget sketchybar --trigger aerospace_mode_change MODE=main']
     f = ['exec-and-forget open ~', 'mode main', 'exec-and-forget sketchybar --trigger aerospace_mode_change MODE=main']
+    g = ['exec-and-forget open /Applications/ChatGPT.app', 'mode main', 'exec-and-forget sketchybar --trigger aerospace_mode_change MODE=main']
     m = ['exec-and-forget open -n /System/Applications/Mail.app', 'mode main', 'exec-and-forget sketchybar --trigger aerospace_mode_change MODE=main']
-    shift-m = ['exec-and-forget open /System/Applications/Music.app', 'mode main', 'exec-and-forget sketchybar --trigger aerospace_mode_change MODE=main']
     s = ['exec-and-forget open -n /System/Applications/System\ Settings.app', 'mode main', 'exec-and-forget sketchybar --trigger aerospace_mode_change MODE=main']
     y = ['exec-and-forget $HOME/.config/aerospace/yazi.sh', 'mode main', 'exec-and-forget sketchybar --trigger aerospace_mode_change MODE=main']
     z = ['exec-and-forget $HOME/.config/aerospace/focus.sh Zotero /Applications/Zotero.app', 'mode main', 'exec-and-forget sketchybar --trigger aerospace_mode_change MODE=main']
@@ -117,6 +117,7 @@ automatically-unhide-macos-hidden-apps = true
     esc = ['mode main', 'exec-and-forget sketchybar --trigger aerospace_mode_change MODE=main']
     h = ['exec-and-forget osascript $HOME/.config/sketchybar/helpers/music_prev.applescript', 'mode main', 'exec-and-forget sketchybar --trigger aerospace_mode_change MODE=main']
     l = ['exec-and-forget osascript $HOME/.config/sketchybar/helpers/music_next.applescript', 'mode main', 'exec-and-forget sketchybar --trigger aerospace_mode_change MODE=main']
+    m = ['trigger-binding --mode main alt-8', 'exec-and-forget open /System/Applications/Music.app', 'mode main', 'exec-and-forget sketchybar --trigger aerospace_mode_change MODE=main']
     space = ['exec-and-forget osascript $HOME/.config/sketchybar/helpers/music_click.applescript', 'mode main', 'exec-and-forget sketchybar --trigger aerospace_mode_change MODE=main']
 
 [mode.im.binding]
