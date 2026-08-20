@@ -7,6 +7,7 @@ end
 set fish_greeting
 set -x EDITOR nvim
 set -x XDG_CONFIG_HOME $HOME/.config
+set -x HOMEBREW_BUNDLE_NO_DESCRIBE 1
 
 set -x PUB_HOSTED_URL "https://pub.flutter-io.cn"
 set -x FLUTTER_STORAGE_BASE_URL "https://storage.flutter-io.cn"
