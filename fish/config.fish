@@ -20,7 +20,7 @@ abbr --add adbls "adb shell ls /sdcard"
 abbr --add adbps "adb push /sdcard/"
 abbr --add adbpl --set-cursor "adb pull % /sdcard/"
 
-if not string match -q "xterm-256color" $TERM
+if not string match -q "xterm-256color" $TERM; and status is-interactive
     clc
 end
 
