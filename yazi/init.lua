@@ -12,11 +12,10 @@ function Linemode:size_and_mtime()
 	return string.format("%s %s", size and ya.readable_size(size) or "", time)
 end
 
-require("full-border"):setup {
-	-- Available values: ui.Border.PLAIN, ui.Border.ROUNDED
-	type = ui.Border.ROUNDED,
-}
+require("full-border"):setup({
+	set = "rounded",
+})
 
-require("relative-motions"):setup({ show_numbers="relative", show_motion = true, enter_mode ="first" })
+require("relative-motions"):setup({ show_numbers = "relative", show_motion = true, enter_mode = "first" })
 
 os.execute("macism com.apple.keylayout.ABC")
