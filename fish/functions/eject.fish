@@ -5,7 +5,7 @@ function eject
 
     for mp in $mount_points
         if test -d "$mp"
-            if hdiutil eject "$mp"
+            if diskutil eject "$mp"
                 echo "✅ $mp ejected."
                 set ejected_any true
             else
