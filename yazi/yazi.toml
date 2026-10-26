@@ -10,8 +10,7 @@ prepend_rules = [
 
 [opener]
 extract = [
-	{ run = 'ouch d -y "%*"', desc = "Extract here with ouch", for = "windows" },
-	{ run = 'ouch d -y "$@"', desc = "Extract here with ouch", for = "unix" },
+	{ run = 'ouch d -y %s', desc = "Extract here with ouch" },
 ]
 video = [
     { run = 'vlc "$@"', desc = "Open in VLC", orphan = true, for = "unix" }
